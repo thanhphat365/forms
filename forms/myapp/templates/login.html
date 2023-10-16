@@ -1,0 +1,17 @@
+{% extends 'home.html' %} 
+{% load static %}
+{% block category %}
+<h1>Thông tin giao hàng</h1>
+<form method="post">
+  {% csrf_token %}
+  <label for='name'>Name:</label><br>
+  <input type="text" name="username" id="username" required/><br>
+  <label for='phone'>Phone : </label><br>
+  <input type="text" name="phone" id="phone" required /><br>
+  <label for='addstress'>Addstress </label><br>
+  <input type="text" name="addstress" id="addstress" required /><br>
+  <label for='note'>Notes</label><br>
+  <input type="text" name="notes" id="note" required /><br>
+  <button type="submit">Đặt Hàng</button>
+</form>
+{% endblock %}
